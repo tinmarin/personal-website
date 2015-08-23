@@ -1,0 +1,65 @@
+body {
+	font-family: 'Ubuntu';
+	overflow: hidden;
+	letter-spacing: 1px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.container {
+	width: 100%;
+}
+
+.logo {
+	position: absolute;
+  	top: 45%;
+  	-webkit-transform: translateY(-45%);
+  	-ms-transform: translateY(-45%);
+  	transform: translateY(-45%);
+  	right: 50%;
+  	margin-right: 10px;
+}
+
+.logo .name {
+	margin-bottom:0;
+}
+
+.logo h4{
+	color: #2E0800;
+	opacity: 0.8;
+}
+
+.text {
+	position: absolute;
+  	top: 45%;
+  	-webkit-transform: translateY(-45%);
+  	-ms-transform: translateY(-45%);
+  	transform: translateY(-45%);
+  	left: 50%;
+  	opacity: 0.5;
+  	margin: 8px 10px 10px 10px;
+  	font-family: 'Inconsolata';
+}
+
+.container .left-bg {
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    /*background: linear-gradient(35deg, rgba(9,45,145,0.9), rgba(9,45,145,0.4));*/
+    background: linear-gradient(25deg, rgba(184,38,6,0.9), rgba(184,38,6,0.5));
+    /*background: linear-gradient(35deg, rgba(145,9,9,0.9), rgba(145,9,9,0.4));*/
+    box-shadow: 3px 0px 8px #2B2B2B;
+}
+
+.links{
+	padding-top: 10px;
+}
+
+.links a{
+	color: black;
+}
+.links i:hover{
+	color: #BF3D20;
+	opacity: 0.9;
+}
