@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500);
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
@@ -7,34 +7,40 @@ body {
   letter-spacing: 1.5px;
   background: #000;
   overflow: hidden; }
-  body #wrapper {
+  html #wrapper, body #wrapper {
     position: relative;
     width: 100%;
     background: #333;
     background-size: cover;
     background-image: url("../img/header.jpg");
     background-position: center; }
-  body #notice {
+  html #notice, body #notice {
     position: absolute;
     text-align: center;
     background: rgba(236, 240, 241, 0.8);
     border-radius: 5px;
     padding: 0 20px;
     margin: 20px; }
-    body #notice h1 {
+    html #notice h1, body #notice h1 {
       font-weight: 400; }
-    body #notice h2 {
+    html #notice h2, body #notice h2 {
       font-weight: 300; }
-  body footer {
+  html footer, body footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center; }
-    body footer p {
+    html footer p, body footer p {
       color: #d0dadc;
       font-weight: 300; }
-      body footer p a {
+      html footer p a, body footer p a {
         text-decoration: none;
         color: #556c72; }
-        body footer p a:hover {
+        html footer p a:hover, body footer p a:hover {
           text-decoration: underline; }
+
+@media screen and (max-width: 450px) {
+  #notice h2 {
+    font-size: 2.5rem; }
+  footer p {
+    font-size: 1.125rem; } }

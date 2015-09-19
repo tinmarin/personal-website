@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500);
 
-body
+html,body
     margin: 0
     padding: 0
     font-family: 'Ubuntu', sans-serif
@@ -20,7 +20,6 @@ body
 
     #notice
         position: absolute
-        //color: #ecf0f1
         text-align: center
         background:rgba(236, 240, 241, 0.8)
         border-radius: 5px
@@ -30,7 +29,6 @@ body
             font-weight: 400
         h2
             font:
-                // size: 2rem
                 weight: 300
     footer 
         position: fixed
@@ -47,7 +45,14 @@ body
                     text-decoration: underline
 
 
-
+@media screen and (max-width:450px)
+    #notice
+        h2
+            font:
+                size: 2.5rem
+    footer  
+        p
+            font-size: 1.125rem
 
 
 
