@@ -7,26 +7,42 @@ html, body {
   letter-spacing: 1.5px;
   background: #000;
   overflow: hidden; }
-  html #wrapper, body #wrapper {
+  html #background, body #background {
     position: relative;
     width: 100%;
     background: #333;
     background-size: cover;
     background-image: url("../img/header.jpg");
     background-position: center; }
-  html #notice, body #notice {
+  html #landing-page, body #landing-page {
     position: absolute;
-    text-align: center;
-    background: rgba(236, 240, 241, 0.8);
-    border-radius: 5px;
-    padding: 0 20px;
-    margin: 20px; }
-    html #notice h1, body #notice h1 {
-      font-weight: 400; }
-    html #notice h2, body #notice h2 {
-      font-weight: 300; }
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    html #landing-page #notice, body #landing-page #notice {
+      background: rgba(236, 240, 241, 0.8);
+      border-radius: 5px;
+      padding: 0 20px;
+      margin: 20px;
+      text-align: center; }
+      html #landing-page #notice h1, body #landing-page #notice h1 {
+        font-weight: 400; }
+      html #landing-page #notice h2, body #landing-page #notice h2 {
+        font-weight: 300; }
   html footer, body footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center; }
@@ -38,9 +54,3 @@ html, body {
         color: #556c72; }
         html footer p a:hover, body footer p a:hover {
           text-decoration: underline; }
-
-@media only screen and (max-device-width: 480px) {
-  #notice h2 {
-    font-size: 3.125rem; }
-  footer p {
-    font-size: 2.5rem; } }

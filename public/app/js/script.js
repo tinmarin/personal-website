@@ -10,11 +10,11 @@
         height = window.innerHeight;
         target = {x: 0, y: height};
 
-        bg = document.getElementById('wrapper');
+        bg = document.getElementById('background');
         bg.style.height = height+'px';
 
         notice = document.getElementById('notice');
-        centerNoticeDiv();
+        //centerNoticeDiv();
        
         canvas = document.getElementById('animation-canvas');
         canvas.width = width;
@@ -59,7 +59,7 @@
         bg.style.height = height+'px';
         canvas.width = width;
         canvas.height = height;
-        centerNoticeDiv();
+        //centerNoticeDiv();
     }
 
     function animate() {
