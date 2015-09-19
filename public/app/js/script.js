@@ -1,6 +1,6 @@
 (function() {
 
-    var width, height, bg, canvas, ctx, circles, target, notice, animateHeader = true;
+    var width, height, bg, canvas, ctx, circles, target, animateHeader = true;
 
     initHeader();
     addListeners();
@@ -11,11 +11,7 @@
         target = {x: 0, y: height};
 
         bg = document.getElementById('background');
-        bg.style.height = height+'px';
-
-        notice = document.getElementById('notice');
-        //centerNoticeDiv();
-       
+        //bg.style.height = height+'px';
         canvas = document.getElementById('animation-canvas');
         canvas.width = width;
         canvas.height = height;
@@ -28,19 +24,6 @@
             circles.push(c);
         }
         animate();
-    }
-
-    function centerNoticeDiv() {
-        var noticeHeight, noticeWidth, left, top;
-        
-        noticeHeight = notice.clientHeight;
-        noticeWidth = notice.clientWidth;
-        
-        top = (height/2)-(noticeHeight/2)- 20;
-        left = (width/2)-(noticeWidth/2) - 20;
-
-        notice.style.left = left+'px';
-        notice.style.top = top+'px';
     }
     
     function addListeners() {
@@ -56,10 +39,9 @@
     function resize() {
         width = window.innerWidth;
         height = window.innerHeight;
-        bg.style.height = height+'px';
+        //bg.style.height = height+'px';
         canvas.width = width;
         canvas.height = height;
-        //centerNoticeDiv();
     }
 
     function animate() {

@@ -3,11 +3,12 @@ var	bodyParser = require('body-parser');
 var morgan     = require('morgan'); 	
 var path 	   = require('path');
 var favicon    = require('serve-favicon');
-
+var compress   = require('compression');
 
 var app = express(); 	
 var port = process.env.PORT || 3000;
 
+app.use(compress()); 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
