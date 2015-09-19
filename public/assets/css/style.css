@@ -39,8 +39,8 @@ html, body {
         html footer p a:hover, body footer p a:hover {
           text-decoration: underline; }
 
-@media screen and (max-width: 450px) {
+@media only screen and (max-device-width: 480px) {
   #notice h2 {
-    font-size: 2.5rem; }
+    font-size: 3.125rem; }
   footer p {
-    font-size: 1.125rem; } }
+    font-size: 2.5rem; } }
