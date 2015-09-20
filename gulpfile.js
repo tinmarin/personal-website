@@ -9,7 +9,7 @@ var rename      = require('gulp-rename');
 var minifyCSS   = require('gulp-minify-css');
 
 var paths = {
-	sass: './public/assets/sass/*.sass'
+	sass: './client/assets/sass/*.sass'
 };
 var BROWSER_SYNC_RELOAD_DELAY = 500;
 
@@ -22,16 +22,16 @@ gulp.task('browser-sync', ['sass', 'nodemon', 'minify'], function() {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('public/assets/sass/style.sass')
+    return gulp.src('client/assets/sass/style.sass')
         .pipe(sass({
             includePaths: ['sass'],
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('public/assets/css/'))
+        .pipe(gulp.dest('client/assets/css/'))
         .pipe(minifyCSS())
         .pipe(rename('style.min.css'))
-        .pipe(gulp.dest('public/assets/css'))
+        .pipe(gulp.dest('client/assets/css'))
         .pipe(browserSync.reload({stream:true}));
 });
 
@@ -56,16 +56,16 @@ gulp.task('nodemon', function (cb) {
 
 
 gulp.task('minify', function () {
-  gulp.src(['public/app/js/script.js'])
+  gulp.src(['client/app/js/script.js'])
       .pipe(uglify())
       .pipe(rename('script.min.js'))
-      .pipe(gulp.dest('public/app/js/build'));
+      .pipe(gulp.dest('client/app/js/build'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('public/assets/sass/*.sass', ['sass']);
-    gulp.watch('public/app/js/*',['minify']);
-    gulp.watch(['public/app/js/*','public/app/views/*', 'public/app/views/*/*'], reload);
+    gulp.watch('client/assets/sass/*.sass', ['sass']);
+    gulp.watch('client/app/js/*',['minify']);
+    gulp.watch(['client/app/js/*','client/app/views/*', 'client/app/views/*/*'], reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
