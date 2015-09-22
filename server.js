@@ -4,6 +4,7 @@ var morgan     = require('morgan');
 var path 	   = require('path');
 var favicon    = require('serve-favicon');
 var compress   = require('compression');
+var fs 		   = require('fs');
 
 var app = express(); 	
 var port = process.env.PORT || 3000;
@@ -20,11 +21,14 @@ app.use(function(req, res, next) {
 	next();
 });
 
-app.use(morgan('dev'));
+var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
+
+app.use(morgan(':remote-addr :date[clf] :user-agent' ,{stream: accessLogStream}));
 
 app.use(express.static(__dirname + '/client'));
 
 app.get('*', function(req, res) {
+	console.log(req.header);
 	res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 

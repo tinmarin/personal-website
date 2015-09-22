@@ -54,6 +54,9 @@ footer {
     font-weight: 300; }
     footer p a {
       text-decoration: none;
-      color: #556c72; }
+      color: #6c8c93;
+      padding-bottom: 1px;
+      margin-left: 2px; }
       footer p a:hover {
-        text-decoration: underline; }
+        color: #d0dadc;
+        border-bottom: 1px solid #6c8c93; }
