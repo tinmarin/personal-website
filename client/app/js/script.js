@@ -2,8 +2,8 @@
 
     var width, height, bg, canvas, ctx, circles, target, animateHeader = true;
 
-    initHeader();
-    addListeners();
+    //initHeader();
+    //addListeners();
 
     function initHeader() {
         width = window.innerWidth;
@@ -25,7 +25,7 @@
         }
         animate();
     }
-    
+
     function addListeners() {
         window.addEventListener('scroll', scrollCheck);
         window.addEventListener('resize', resize);
@@ -64,7 +64,7 @@
         (function() {
             _this.pos = {};
             init();
-            
+
         })();
 
         function init() {

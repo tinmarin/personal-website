@@ -1,15 +1,15 @@
-var express    = require('express');		
-var	bodyParser = require('body-parser'); 	
-var morgan     = require('morgan'); 	
+var express    = require('express');
+var	bodyParser = require('body-parser');
+var morgan     = require('morgan');
 var path 	   = require('path');
 var favicon    = require('serve-favicon');
 var compress   = require('compression');
 var fs 		   = require('fs');
 
-var app = express(); 	
+var app = express();
 var port = process.env.PORT || 3000;
 
-app.use(compress()); 
+app.use(compress());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -20,10 +20,6 @@ app.use(function(req, res, next) {
 	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type, Authorization');
 	next();
 });
-
-var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
-
-app.use(morgan(':remote-addr :date[clf] :user-agent' ,{stream: accessLogStream}));
 
 app.use(express.static(__dirname + '/client'));
 
