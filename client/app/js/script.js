@@ -2,7 +2,7 @@
 
     var width, height, bg, canvas, ctx, circles, target, animateHeader = true;
 
-    //initHeader();
+    initHeader();
     //addListeners();
 
     function initHeader() {
@@ -18,12 +18,12 @@
         ctx = canvas.getContext('2d');
 
         // create particles
-        circles = [];
-        for(var x = 0; x < width*0.5; x++) {
-            var c = new Circle();
-            circles.push(c);
-        }
-        animate();
+        // circles = [];
+        // for(var x = 0; x < width*0.5; x++) {
+        //     var c = new Circle();
+        //     circles.push(c);
+        // }
+        //animate();
     }
 
     function addListeners() {
