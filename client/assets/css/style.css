@@ -13,7 +13,7 @@ html, body {
   width: 100%;
   background: #333;
   background-size: cover;
-  background-image: url("../img/header.jpg");
+  background-image: url("../img/bg.png");
   background-position: center; }
 
 #landing-page {
@@ -36,13 +36,18 @@ html, body {
   #landing-page #notice {
     background: rgba(236, 240, 241, 0.8);
     border-radius: 5px;
-    padding: 0 20px;
+    padding: 20px;
     margin: 20px;
     text-align: center; }
     #landing-page #notice h1 {
-      font-weight: 400; }
+      margin: 20px;
+      font-size: 3rem;
+      font-weight: 300; }
     #landing-page #notice h2 {
       font-weight: 300; }
+    #landing-page #notice hr {
+      border: 1px solid black;
+      width: 60px; }
 
 footer {
   position: absolute;
