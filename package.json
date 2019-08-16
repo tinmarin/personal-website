@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "main": "server.js",
   "author": "Sergio Marron",
+    "scripts": {
+    "start": "node app.js"
+  }
   "dependencies": {
     "angular": "^1.4.1",
     "angular-animate": "^1.4.0",
