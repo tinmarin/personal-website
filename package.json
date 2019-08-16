@@ -1,11 +1,11 @@
 {
   "name": "My Personal Website",
   "version": "0.0.1",
-  "main": "server.js",
-  "author": "Sergio Marron",
-    "scripts": {
+  "private": true,
+  "scripts": {
     "start": "node app.js"
   }
+  "author": "Sergio Marron",
   "dependencies": {
     "angular": "^1.4.1",
     "angular-animate": "^1.4.0",
