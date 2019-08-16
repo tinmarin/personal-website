@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js"
-  }
+  },
   "author": "Sergio Marron",
   "dependencies": {
     "angular": "^1.4.1",
